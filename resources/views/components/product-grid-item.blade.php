@@ -1,4 +1,6 @@
 <a href="{{ route('product.show', $product) }}">
-    <img src="{{ asset('images/product/' . $product->image) }}" alt="{{ $product->name }}">
+    @foreach ($product->images as $productImage)
+        <img src="{{ asset('images/product/' . $productImage->image_name) }}" alt="{{ $product->name }}">
+    @endforeach
     {{ $product->name }}
 </a>
