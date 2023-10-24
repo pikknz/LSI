@@ -26,8 +26,9 @@
                 {{ session('success') }}
             </div>
         @endif
-        <form method="POST" action="productEnquire">
+        <form method="POST" action="enquiry">
             @csrf
+            @method('POST')
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                 <label for="email">Email address</label>
                 <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
@@ -38,7 +39,6 @@
                 <label for="name">Name</label>
                 <input name="name" type="text" class="form-control" id="name" aria-describedby="name" placeholder="Your name">
                 <span class="text-danger">{{ $errors->first('name') }}</span>
-
             </div>
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                 <label for="exampleInputPassword1">Enquiry</label>
