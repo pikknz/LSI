@@ -28,6 +28,8 @@ It may display an error after completing this but it's ok, it's because you've n
 
 `copy .env.example .env`
 
+Create an empty file "C:\\exercise\\database\\database.sqlite"
+
 Configure your database connection in the .env file. For simplicity, you can create a file at `database\database.sqlite` then set the following environment variables:
 
 
